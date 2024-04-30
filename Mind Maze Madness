@@ -1,0 +1,1069 @@
+import random
+import turtle
+
+def draw_0():
+    cursor.left(90)
+    cursor.pendown()
+    for x in range(2):
+        cursor.circle(-6.7,180)
+        cursor.forward(10)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_1():
+    cursor.left(45)
+    cursor.pendown()
+    cursor.forward(10)
+    cursor.right(135)
+    cursor.forward(23)
+    cursor.left(90)
+    cursor.back(9)
+    cursor.forward(18)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_2():
+    cursor.left(90)
+    cursor.pendown()
+    cursor.circle(-7, 210)
+    cursor.setheading(225)
+    cursor.forward(17)
+    cursor.left(135)
+    cursor.forward(16)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_3():
+    cursor.left(90)
+    cursor.forward(2)
+    cursor.circle(-6,45)
+    cursor.pendown()
+    cursor.circle(-6,230)
+    cursor.setheading(0)
+    cursor.circle(-7,230)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_4():
+    cursor.right(90)
+    cursor.forward(2)
+    cursor.left(150)
+    cursor.pendown()
+    cursor.forward(10)
+    cursor.back(10)
+    cursor.right(60)
+    cursor.forward(15)
+    cursor.back(4)
+    cursor.left(90)
+    cursor.forward(10)
+    cursor.back(25)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_x():
+    cursor.right(45)
+    cursor.pendown()
+    cursor.forward(20)
+    cursor.back(10)
+    cursor.left(90)
+    cursor.back(10)
+    cursor.forward(20)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_normal():
+    cursor.left(90)
+    cursor.pendown()
+    cursor.back(15)
+    cursor.forward(30)
+    cursor.right(150)
+    cursor.forward(33)
+    cursor.left(150)
+    cursor.forward(30)
+    cursor.penup()
+    cursor.back(15)
+    cursor.right(90)
+    cursor.forward(15)
+    cursor.pendown()
+    cursor.circle(-8)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(2)
+    cursor.back(18)
+    cursor.forward(9)
+    cursor.circle(-6,135)
+    cursor.penup()
+    cursor.setheading(0)
+    cursor.forward(5)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(2)
+    cursor.back(16)
+    for _ in range(2):
+        cursor.forward(10)
+        cursor.circle(-6,180)
+        cursor.forward(10)
+        cursor.left(180)
+    cursor.penup()
+    cursor.forward(16)
+    cursor.right(90)
+    cursor.forward(15)
+    cursor.pendown()
+    cursor.circle(-8,450)
+    cursor.back(5)
+    cursor.forward(14)
+    cursor.penup()
+    cursor.left(90)
+    cursor.forward(8)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(32)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_past():
+    cursor.left(90)
+    cursor.pendown()
+    cursor.back(18)
+    cursor.forward(33)
+    cursor.right(90)
+    cursor.forward(5)
+    cursor.circle(-8,180)
+    cursor.forward(5)
+    cursor.penup()
+    cursor.left(180)
+    cursor.forward(22)
+    cursor.pendown()
+    cursor.circle(-7,450)
+    cursor.back(4)
+    cursor.forward(14)
+    cursor.penup()
+    cursor.left(90)
+    cursor.forward(12)
+    cursor.circle(4,270)
+    cursor.pendown()
+    cursor.circle(4,270)
+    cursor.circle(-4,270)
+    cursor.penup()
+    cursor.left(90)
+    cursor.forward(8)
+    cursor.right(90)
+    cursor.pendown()
+    cursor.forward(14)
+    cursor.back(30)
+    cursor.forward(6)
+    cursor.left(90)
+    cursor.back(8)
+    cursor.forward(16)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_fog():
+    cursor.pendown()
+    cursor.left(90)
+    cursor.back(15)
+    cursor.forward(30)
+    cursor.right(90)
+    cursor.forward(20)
+    cursor.back(20)
+    cursor.right(90)
+    cursor.forward(15)
+    cursor.left(90)
+    cursor.forward(12)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.pendown()
+    cursor.circle(-8)
+    cursor.penup()
+    cursor.forward(20)
+    cursor.pendown()
+    cursor.circle(-8,450)
+    cursor.back(5)
+    cursor.forward(20)
+    cursor.circle(-6,180)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_plus():
+    cursor.left(45)
+    draw_x()
+    cursor.setheading(0)
+
+def draw_arrow_key():
+    cursor.pendown()
+    for x in range(4):
+        cursor.forward(30)
+        cursor.right(90)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.right(90)
+    cursor.forward(10)
+    cursor.left(30)
+    cursor.pendown()
+    for x in range(3):
+        cursor.forward(10)
+        cursor.right(120)
+    cursor.right(30)
+    cursor.forward(15)
+    cursor.penup()
+
+def draw_equal():
+    cursor.pendown()
+    for x in range(2):
+        cursor.forward(30)
+        cursor.penup()
+        cursor.right(90)
+        cursor.forward(20)
+        cursor.right(90)
+        cursor.pendown()
+    cursor.penup()
+
+def draw_move():
+    cursor.pendown()
+    cursor.setheading(90)
+    cursor.forward(30)
+    cursor.right(150)
+    cursor.forward(20)
+    cursor.left(120)
+    cursor.forward(20)
+    cursor.right(150)
+    cursor.forward(30)
+    cursor.left(90)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.pendown()
+    cursor.circle(7)
+    cursor.penup()
+    cursor.forward(20)
+    cursor.left(120)
+    cursor.pendown()
+    for x in range(2):
+        cursor.forward(15)
+        cursor.back(15)
+        cursor.right(60)
+    cursor.penup()
+    cursor.forward(20)
+    cursor.circle(7,270)
+    cursor.pendown()
+    cursor.left(90)
+    cursor.forward(15)
+    cursor.left(90)
+    cursor.circle(7,315)
+    cursor.setheading(0)
+    cursor.penup()
+
+def draw_enter():
+    cursor.pendown()
+    cursor.forward(60)
+    cursor.left(90)
+    cursor.forward(50)
+    cursor.left(90)
+    cursor.forward(30)
+    cursor.left(90)
+    cursor.forward(20)
+    cursor.right(90)
+    cursor.forward(30)
+    cursor.left(90)
+    cursor.forward(30)
+    cursor.penup()
+    cursor.back(15)
+    cursor.left(90)
+    cursor.forward(15)
+    cursor.left(30)
+    cursor.pendown()
+    for x in range(3):
+        cursor.forward(12)
+        cursor.right(120)
+    cursor.right(30)
+    cursor.forward(30)
+    cursor.left(90)
+    cursor.forward(10)
+    cursor.penup()
+    cursor.setheading(0)
+
+def draw_start():
+    cursor.circle(8,270)
+    cursor.pendown()
+    cursor.circle(8,270)
+    cursor.circle(-7,270)
+    cursor.penup()
+    cursor.circle(-7,270)
+    cursor.forward(20)
+    cursor.right(90)
+    cursor.pendown()
+    cursor.forward(30)
+    cursor.back(20)
+    cursor.left(90)
+    cursor.back(10)
+    cursor.forward(20)
+    cursor.penup()
+    cursor.right(90)
+    cursor.forward(12)
+    cursor.pendown()
+    cursor.circle(8,540)
+    cursor.forward(7)
+    cursor.back(17)
+    cursor.right(90)
+    cursor.penup()
+    cursor.forward(5)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(18)
+    cursor.back(8)
+    cursor.circle(-6,150)
+    cursor.penup()
+    cursor.circle(-6,30)
+    cursor.forward(9)
+    cursor.left(90)
+    cursor.forward(5)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(30)
+    cursor.back(10)
+    cursor.right(90)
+    cursor.back(10)
+    cursor.forward(20)
+    cursor.penup()
+
+def draw_r_key():
+    cursor.setheading(0)
+    cursor.pendown()
+    for x in range(4):
+        cursor.forward(40)
+        if x == 3:
+            cursor.back(20)
+        cursor.right(90)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.back(10)
+    cursor.forward(20)
+    cursor.right(90)
+    cursor.forward(5)
+    cursor.circle(-5,180)
+    cursor.forward(5)
+    cursor.back(4)
+    cursor.left(120)
+    cursor.forward(11)
+    cursor.setheading(0)
+    cursor.penup()
+
+def draw_reset():
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(30)
+    cursor.right(90)
+    cursor.forward(10)
+    cursor.circle(-7,180)
+    cursor.forward(10)
+    cursor.back(8)
+    cursor.left(120)
+    cursor.forward(20)
+    cursor.left(60)
+    cursor.penup()
+    cursor.forward(15)
+    cursor.circle(7,270)
+    cursor.left(90)
+    cursor.pendown()
+    cursor.forward(11)
+    cursor.left(90)
+    cursor.circle(7,330)
+    cursor.penup()
+    cursor.circle(7,30)
+    cursor.circle(-2,180)
+    cursor.forward(3)
+    cursor.pendown()
+    cursor.circle(4,270)
+    cursor.circle(-4,270)
+    cursor.penup()
+    cursor.circle(-4,90)
+    cursor.left(180)
+    cursor.forward(11)
+    cursor.pendown()
+    cursor.forward(11)
+    cursor.left(90)
+    cursor.circle(7, 330)
+    cursor.penup()
+    cursor.circle(7, 30)
+    cursor.circle(-3, 180)
+    cursor.forward(6)
+    cursor.pendown()
+    cursor.back(30)
+    cursor.forward(10)
+    cursor.left(90)
+    cursor.back(10)
+    cursor.forward(20)
+    cursor.penup()
+
+def draw_controls(x_shift_all = 0, y_shift_all = 0):
+    cursor.goto(x_shift_all - 250,y_shift_all + 250)
+    draw_arrow_key()
+    cursor.goto(x_shift_all - 185,y_shift_all + 215)
+    draw_arrow_key()
+    cursor.goto(x_shift_all - 220, y_shift_all + 185)
+    draw_arrow_key()
+    cursor.goto(x_shift_all - 285, y_shift_all + 185)
+    draw_arrow_key()
+    cursor.goto(x_shift_all - 175, y_shift_all + 220)
+    draw_equal()
+    cursor.goto(x_shift_all - 135, y_shift_all + 200)
+    draw_move()
+    cursor.goto(x_shift_all - 10, y_shift_all + 190)
+    draw_enter()
+    cursor.goto(x_shift_all + 60, y_shift_all + 220)
+    draw_equal()
+    cursor.goto(x_shift_all + 105, y_shift_all + 200)
+    draw_start()
+    cursor.goto(x_shift_all + 210, y_shift_all + 230)
+    draw_r_key()
+    cursor.goto(x_shift_all + 260, y_shift_all + 220)
+    draw_equal()
+    cursor.goto(x_shift_all + 300, y_shift_all + 200)
+    draw_reset()
+
+def draw_menu_text(text, coord):
+    if text == '12':
+        cursor.goto(coord[0] - 150, coord[1])
+        draw_1()
+        cursor.goto(coord[0] - 130, coord[1])
+        draw_2()
+        cursor.goto(coord[0] - 110, coord[1])
+        draw_x()
+        cursor.goto(coord[0] - 90, coord[1])
+        draw_1()
+        cursor.goto(coord[0] - 70, coord[1])
+        draw_2()
+    elif text == '20':
+        cursor.goto(coord[0] - 150, coord[1])
+        draw_2()
+        cursor.goto(coord[0] - 130, coord[1])
+        draw_0()
+        cursor.goto(coord[0] - 110, coord[1])
+        draw_x()
+        cursor.goto(coord[0] - 90, coord[1])
+        draw_2()
+        cursor.goto(coord[0] - 70, coord[1])
+        draw_0()
+    elif text == '30':
+        cursor.goto(coord[0] - 150, coord[1])
+        draw_3()
+        cursor.goto(coord[0] - 130, coord[1])
+        draw_0()
+        cursor.goto(coord[0] - 110, coord[1])
+        draw_x()
+        cursor.goto(coord[0] - 90, coord[1])
+        draw_3()
+        cursor.goto(coord[0] - 70, coord[1])
+        draw_0()
+    elif text == '40':
+        cursor.goto(coord[0] - 150, coord[1])
+        draw_4()
+        cursor.goto(coord[0] - 130, coord[1])
+        draw_0()
+        cursor.goto(coord[0] - 110, coord[1])
+        draw_x()
+        cursor.goto(coord[0] - 90, coord[1])
+        draw_4()
+        cursor.goto(coord[0] - 70, coord[1])
+        draw_0()
+    elif text == 'normal':
+        cursor.goto(coord[0] + 50, coord[1])
+        draw_normal()
+    elif text == 'past':
+        cursor.goto(coord[0] + 50, coord[1])
+        draw_past()
+    elif text == 'fog':
+        cursor.goto(coord[0] + 50, coord[1])
+        draw_fog()
+        cursor.setheading(0)
+    else:
+        cursor.goto(coord[0] + 50, coord[1])
+        draw_past()
+        cursor.goto(coord[0] + 140, coord[1])
+        draw_plus()
+        cursor.goto(coord[0] + 190, coord[1])
+        draw_fog()
+
+def menu_up():
+    global grid_size
+    global vision
+    if active_column == 'grid_size':
+        keys = ['12', '20', '30', '40']
+        goto_key = keys[keys.index(str(grid_size)) -1]
+        cursor.goto(options['grid_size'][goto_key])
+        grid_size = int(goto_key)
+    else:
+        keys = ['normal', 'past', 'fog', 'past+fog']
+        goto_key = keys[keys.index(vision) -1]
+        second.goto(options['vision'][goto_key])
+        vision = goto_key
+
+def menu_down():
+    global grid_size
+    global vision
+    if active_column == 'grid_size':
+        keys = ['12', '20', '30', '40']
+        goto_key = keys[keys.index(str(grid_size)) -3]
+        cursor.goto(options['grid_size'][goto_key])
+        grid_size = int(goto_key)
+    else:
+        keys = ['normal', 'past', 'fog', 'past+fog']
+        goto_key = keys[keys.index(vision) -3]
+        second.goto(options['vision'][goto_key])
+        vision = goto_key
+
+def menu_switch():
+    global active_column
+    if active_column == 'grid_size':
+        second.color('blue')
+        cursor.color('black')
+        active_column = 'vision'
+    else:
+        cursor.color('blue')
+        second.color('black')
+        active_column = 'grid_size'
+
+def menu_done():
+    global menu_complete
+    menu_complete = 'yes'
+
+menu = turtle.Screen()
+options = {
+    'grid_size': {'12':(-50,90), '20':(-50,30), '30':(-50,-30), '40':(-50,-90)},
+    'vision': {'normal':(10,90), 'past':(10,30), 'fog':(10,-30), 'past+fog':(10,-90)}
+}
+cursor = turtle.Turtle()
+cursor.shape('circle')
+cursor.shapesize(.1)
+cursor.speed(0)
+cursor.pensize(3)
+cursor.penup()
+draw_controls(-50)
+for k, v in options.items():
+    for text, coord in v.items():
+        if k == 'grid_size':
+            draw_menu_text(text,coord)
+        cursor.goto(coord[0]-20,coord[1]+20)
+        cursor.pendown()
+        for _ in range(4):
+            cursor.forward(40)
+            cursor.right(90)
+        cursor.penup()
+        if k == 'vision':
+            draw_menu_text(text,coord)
+cursor.goto(options['grid_size']['12'])
+cursor.shapesize(1.5)
+cursor.shape('square')
+cursor.color('blue')
+second = turtle.Turtle()
+second.penup()
+second.shape('square')
+second.shapesize(1.5)
+second.goto(options['vision']['normal'])
+
+grid_size = 12
+vision = 'normal'
+menu_complete = 'no'
+active_column = 'grid_size'
+
+menu.tracer(0)
+menu.listen()
+menu.onkeypress(menu_up, 'Up')
+menu.onkeypress(menu_down, 'Down')
+menu.onkeypress(menu_switch, 'Left')
+menu.onkeypress(menu_switch, 'Right')
+menu.onkeypress(menu_done, 'Return')
+
+while menu_complete == 'no':
+    menu.update()
+
+menu.clear()
+
+columns = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN'
+if grid_size == 12:
+    base = 62
+    player_size = 1.8
+    start_mark = 20
+    target_mark = 10
+elif grid_size == 40:
+    base = 55
+    player_size = .4
+    start_mark = 6
+    target_mark = 4
+elif grid_size == 30:
+    base = 50
+    player_size = .6
+    start_mark = 8
+    target_mark = 5
+else:
+    base = 50
+    player_size = 1
+    start_mark = 10
+    target_mark = 6
+
+def create_grid(grid_size):
+    global columns
+    global base
+    grid = {}
+    coord_size = base - grid_size
+    midpoint_shift = coord_size // 2
+    full_shift = (coord_size * grid_size) // 2
+    for row in range(1, grid_size + 1):
+        for column in range(grid_size):
+            coord = columns[column] + str(row)
+            grid[coord] = {}
+            if row != 1:
+                grid[coord]['N'] = 'wall'
+            if column != columns[grid_size - 1]:
+                grid[coord]['E'] = 'wall'
+            if row != grid_size:
+                grid[coord]['S'] = 'wall'
+            if column != 'a':
+                grid[coord]['W'] = 'wall'
+            grid[coord]['Visited'] = 'no'
+            x = (column + 1) * coord_size - midpoint_shift
+            y = row * coord_size - midpoint_shift
+            grid[coord]['xy'] = (x - full_shift, (y * -1) + full_shift)
+    return grid
+
+def find_neighbors(coord):
+    global grid_size
+    global columns
+    col_index = columns.index(coord[0])
+    neighbors = {}
+    if int(coord[1:]) != 1:
+        neighbors['N'] = columns[col_index] + str(int(coord[1:])-1)
+    if int(coord[1:]) != grid_size:
+        neighbors['S'] = columns[col_index] + str(int(coord[1:])+1)
+    if coord[0] != 'a':
+        neighbors['W'] = columns[col_index - 1] + coord[1:]
+    if coord[0] != columns[grid_size - 1]:
+        neighbors['E'] = columns[col_index + 1] + coord[1:]
+    return neighbors
+
+def check_neighbors(grid, neighbors):
+    unvisited = []
+    for value in neighbors.values():
+        if grid[value]['Visited'] == 'no':
+            unvisited.append(value)
+    return unvisited
+
+def create_paths(grid, starting_point):
+    global grid_size
+    if starting_point[0] == 'a':
+        col_step = 1
+        col_start = 0
+        col_end = grid_size
+    else:
+        col_step = -1
+        col_start = grid_size -1
+        col_end = -1
+    if starting_point[-1] == '1':
+        row_step = 1
+        row_start = 1
+        row_end = grid_size + 1
+    else:
+        row_step = -1
+        row_start = grid_size
+        row_end = 0
+
+    global columns
+    for row in range(row_start, row_end, row_step):
+        for col in range(col_start, col_end, col_step):
+            coord = columns[col] + str(row)
+            neighbors = find_neighbors(coord)
+            unvisited_neighbors = check_neighbors(grid, neighbors)
+            grid[coord]['Visited'] = 'yes'
+            while grid[coord]['Visited'] == 'yes' and len(unvisited_neighbors) > 0:
+                visit = random.choice(unvisited_neighbors)
+                for key in neighbors.keys():
+                    if neighbors[key] == visit:
+                        path_from = key
+                if path_from == 'N':
+                    path_to = 'S'
+                elif path_from == 'S':
+                    path_to = 'N'
+                elif path_from == 'W':
+                    path_to = 'E'
+                else:
+                    path_to = 'W'
+                grid[coord][path_from] = 'path'
+                grid[coord]['Visited'] = 'yes'
+                grid[visit][path_to] = 'path'
+                grid[visit]['Visited'] = 'yes'
+                coord = visit
+                neighbors = find_neighbors(coord)
+                unvisited_neighbors = check_neighbors(grid, neighbors)
+    return grid
+
+def test_maze(maze, start):
+    for coord in maze.keys():
+        maze[coord]['Visited'] = 'no'
+    current = start
+    branch = []
+    while True:
+        maze[current]['Visited'] = 'yes'
+        if current in branch:
+            branch.remove(current)
+        neighbors = find_neighbors(current)
+        moves = []
+        for compass, coord in neighbors.items():
+            if maze[coord]['Visited'] == 'no' and maze[current][compass] == 'path' and coord not in branch:
+                moves.append(coord)
+        if moves:
+            current = random.choice(moves)
+            for move in moves:
+                if move != current:
+                    branch.append(move)
+        elif branch:
+            current = random.choice(branch)
+        else:
+            break
+    unvisited = 0
+    for coord in maze.keys():
+        if maze[coord]['Visited'] == 'no':
+            unvisited += 1
+    if unvisited:
+        return 'Fail'
+    else:
+        return 'Pass'
+
+def set_wall_turt_to_coord(grid, coord):
+    global grid_size
+    global base
+    midpoint_shift = (base - grid_size) // 2
+    wall.goto(grid[coord]['xy'][0] - midpoint_shift, grid[coord]['xy'][1] + midpoint_shift)
+
+def draw_border():
+    global grid_size
+    grid_border = (base - grid_size) * grid_size
+    set_wall_turt_to_coord(maze, 'a1')
+    wall.pendown()
+    for x in range(4):
+        wall.forward(grid_border)
+        wall.right(90)
+    wall.penup()
+
+def draw_maze(maze, start, end):
+    global grid_size
+    global base
+    global vision
+    draw_border()
+    if vision == 'normal':
+        for coord in maze.keys():
+            set_wall_turt_to_coord(maze, coord)
+            if 'N' in maze[coord] and maze[coord]['N'] == 'wall':
+                wall.pendown()
+                wall.forward(base - grid_size)
+                wall.penup()
+            else:
+                wall.forward(base - grid_size)
+            if 'E' in maze[coord] and maze[coord]['E'] == 'wall':
+                wall.right(90)
+                wall.pendown()
+                wall.forward(base - grid_size)
+                wall.penup()
+                wall.left(90)
+    start_point = maze[start]['xy']
+    wall.goto(start_point[0] - (start_mark // 2), start_point[1] + (start_mark // 2))
+    wall.pencolor('blue')
+    wall.pensize(start_mark // 5)
+    wall.pendown()
+    for x in range(4):
+        wall.forward(start_mark)
+        wall.right(90)
+    wall.penup()
+    end_point = maze[end]['xy']
+    wall.goto(end_point[0], end_point[1] + target_mark + 2)
+    wall.pencolor('green')
+    wall.pensize(target_mark - 2)
+    wall.pendown()
+    wall.right(72)
+    for x in range(5):
+        wall.forward(target_mark)
+        wall.left(72)
+        wall.forward(target_mark)
+        wall.right(144)
+    wall.penup()
+    wall.pensize(3)
+    wall.pencolor('black')
+    set_wall_turt_to_coord(maze,'a1')
+
+def create_maze():
+    global grid_size
+    global columns
+    right_col = columns[grid_size - 1]
+    corners = ['a1', right_col + str(grid_size), 'a' + str(grid_size), right_col + '1']
+    start = random.choice(corners)
+    if start[0] == 'a':
+        target = corners[corners.index(start) + 1]
+    else:
+        target = corners[corners.index(start) - 1]
+    while True:
+        maze = create_paths(create_grid(grid_size), start)
+        if test_maze(maze,start) == 'Pass':
+            break
+    return maze, start, target
+
+def move_up():
+    global location
+    if 'N' in maze[location] and maze[location]['N'] == 'path':
+        new_location = find_neighbors(location)['N']
+        player.goto(maze[new_location]['xy'])
+        location = new_location
+        if vision == 'past':
+            update_past(location)
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'fog':
+            update_fog()
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'past+fog':
+            update_fog_with_past()
+            set_wall_turt_to_coord(maze, 'a1')
+
+def move_down():
+    global location
+    if 'S' in maze[location] and maze[location]['S'] == 'path':
+        new_location = find_neighbors(location)['S']
+        player.goto(maze[new_location]['xy'])
+        location = new_location
+        if vision == 'past':
+            update_past(location)
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'fog':
+            update_fog()
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'past+fog':
+            update_fog_with_past()
+            set_wall_turt_to_coord(maze, 'a1')
+
+def move_left():
+    global location
+    if 'W' in maze[location] and maze[location]['W'] == 'path':
+        new_location = find_neighbors(location)['W']
+        player.goto(maze[new_location]['xy'])
+        location = new_location
+        if vision == 'past':
+            update_past(location)
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'fog':
+            update_fog()
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'past+fog':
+            update_fog_with_past()
+            set_wall_turt_to_coord(maze, 'a1')
+
+def move_right():
+    global location
+    if 'E' in maze[location] and maze[location]['E'] == 'path':
+        new_location = find_neighbors(location)['E']
+        player.goto(maze[new_location]['xy'])
+        location = new_location
+        if vision == 'past':
+            update_past(location)
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'fog':
+            update_fog()
+            set_wall_turt_to_coord(maze, 'a1')
+        elif vision == 'past+fog':
+            update_fog_with_past()
+            set_wall_turt_to_coord(maze, 'a1')
+
+def restart():
+    global location
+    location = start_point
+    player.goto(maze[location]['xy'])
+    if vision == 'fog':
+        update_fog()
+        set_wall_turt_to_coord(maze, 'a1')
+    elif vision == 'past+fog':
+        update_fog_with_past()
+        set_wall_turt_to_coord(maze, 'a1')
+
+def update_past(coord):
+    wall.setheading(0)
+    compass = ['N', 'E', 'S', 'W']
+    set_wall_turt_to_coord(maze, coord)
+    for direction in compass:
+        if direction in maze[coord].keys():
+            if maze[coord][direction] == 'wall':
+                wall.pendown()
+                wall.forward(base - grid_size)
+                wall.penup()
+            else:
+                wall.forward(base - grid_size)
+        else:
+            wall.forward(base - grid_size)
+        wall.right(90)
+
+def update_fog():
+    global fog_coord
+    fog_list = [location]
+    neighbors = find_neighbors(location)
+    for neighbor in neighbors.values():
+        fog_list.append(neighbor)
+        next_neighbors = find_neighbors(neighbor)
+        for next_neighbor in next_neighbors.values():
+            if next_neighbor not in fog_list:
+                fog_list.append(next_neighbor)
+    wall.pencolor('white')
+    for coord in fog_coord:
+        if coord not in fog_list:
+            set_wall_turt_to_coord(maze, coord)
+            update_past(coord)
+    wall.pencolor('black')
+    for coord in fog_list:
+        update_past(coord)
+    draw_border()
+    fog_coord = fog_list
+
+def update_fog_with_past():
+    global fog_coord
+    global past_coord
+    if location not in past_coord:
+        past_coord.append(location)
+    fog_list = [location]
+    neighbors = find_neighbors(location)
+    for neighbor in neighbors.values():
+        fog_list.append(neighbor)
+        next_neighbors = find_neighbors(neighbor)
+        for next_neighbor in next_neighbors.values():
+            if next_neighbor not in fog_list:
+                fog_list.append(next_neighbor)
+                next_next_neighbors = find_neighbors(next_neighbor)
+                for next_next_neighbor in next_next_neighbors.values():
+                    if next_next_neighbor not in fog_list:
+                        fog_list.append(next_next_neighbor)
+    wall.pencolor('white')
+    for coord in fog_coord:
+        if coord not in fog_list:
+            update_past(coord)
+    wall.pencolor('black')
+    for coord in fog_list:
+        if coord in past_coord:
+            update_past(coord)
+    draw_border()
+    fog_coord = fog_list
+
+
+maze, start_point, target = create_maze()
+location = start_point
+moves = find_neighbors(location)
+wn = turtle.Screen()
+wall = turtle.Turtle()
+wall.speed(0)
+wall.shape("circle")
+wall.shapesize(.1)
+wall.penup()
+wall.pensize(3)
+set_wall_turt_to_coord(maze, 'a1')
+draw_maze(maze, start_point, target)
+player = turtle.Turtle()
+player.shape('square')
+player.color('blue')
+player.shapesize(player_size)
+player.penup()
+player.goto(maze[location]['xy'])
+if vision == 'past':
+    update_past(location)
+if vision == 'fog':
+    fog_coord = []
+    update_fog()
+if vision == 'past+fog':
+    fog_coord = []
+    past_coord = []
+    update_fog_with_past()
+
+wn.tracer(0)
+wn.listen()
+wn.onkeypress(move_up, 'Up')
+wn.onkeypress(move_down, 'Down')
+wn.onkeypress(move_left, 'Left')
+wn.onkeypress(move_right, 'Right')
+wn.onkeypress(restart, 'r')
+
+while location != target:
+    wn.update()
+wn.clear()
+
+victor = turtle.Turtle()
+victor.penup()
+victor.shape('circle')
+victor.shapesize(.1)
+victor.pensize(5)
+victor.pencolor('orange')
+victor.speed(0)
+victor.goto(0,-100)
+victor.pendown()
+victor.forward(150)
+victor.left(60)
+victor.forward(240)
+victor.left(90)
+victor.circle(-25)
+victor.left(60)
+victor.forward(120)
+victor.right(30)
+victor.forward(90)
+victor.right(60)
+victor.forward(120)
+victor.left(60)
+victor.circle(-30)
+victor.left(60)
+victor.forward(120)
+victor.right(60)
+victor.forward(90)
+victor.right(30)
+victor.forward(120)
+victor.left(60)
+victor.circle(-25)
+victor.left(90)
+victor.forward(240)
+victor.left(60)
+victor.forward(150)
+victor.penup()
+victor.pencolor('green')
+victor.pensize(8)
+victor.goto(-100,15)
+victor.right(80)
+victor.pendown()
+victor.forward(100)
+victor.left(160)
+victor.forward(80)
+victor.right(160)
+victor.forward(80)
+victor.left(160)
+victor.forward(100)
+victor.penup()
+victor.setheading(0)
+victor.forward(25)
+victor.pendown()
+victor.forward(60)
+victor.back(30)
+victor.right(90)
+victor.forward(100)
+victor.left(90)
+victor.back(30)
+victor.forward(60)
+victor.penup()
+victor.forward(25)
+victor.left(90)
+victor.pendown()
+victor.forward(100)
+victor.right(150)
+victor.forward(120)
+victor.left(150)
+victor.forward(100)
+victor.penup()
+victor.goto(15,60)
+victor.setheading(90)
+victor.color('blue')
+victor.shape('square')
+victor.shapesize(1.5)
+victor.speed(1.5)
+for x in range(6):
+    victor.right(45)
+    victor.left(90)
+    victor.right(45)
